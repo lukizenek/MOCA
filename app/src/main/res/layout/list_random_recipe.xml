@@ -19,7 +19,7 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:textStyle="bold"
-            android:textColor="@color/bordo"
+            android:textColor="@color/moca"
             android:textSize="24sp"
             android:padding="8dp"
             android:layout_width="match_parent"
