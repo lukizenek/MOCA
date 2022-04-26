@@ -11,4 +11,5 @@
     <color name="bordo">#681009</color>
     <color name="moca">#AB845F</color>
     <color name="moca_light">#D8BA9E</color>
+    <color name="moca_dark">#4E2500</color>
 </resources>
