@@ -3,7 +3,9 @@ package com.example.moca;
 import android.content.Context;
 
 import com.example.moca.Listeners.RandomRecipeResponseListener;
+import com.example.moca.Listeners.RecipeDetailsListener;
 import com.example.moca.Models.RandomRecipeApiResponse;
+import com.example.moca.Models.RecipeDetailsResponse;
 
 import java.util.Enumeration;
 import java.util.List;
@@ -14,6 +16,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public class RequestManager {
@@ -46,6 +49,26 @@ public class RequestManager {
             }
         });
     }
+
+    public void getRecipeDetails(RecipeDetailsListener detailsListener, int id){
+        CallRecipeDetails callRecipeDetails = reetrofit.create(CallRecipeDetails.class);
+        Call<RecipeDetailsResponse> call = callRecipeDetails.callRecipeDetails(id, context.getString(R.string.api_key));
+        call.enqueue(new Callback<RecipeDetailsResponse>() {
+            @Override
+            public void onResponse(Call<RecipeDetailsResponse> call, Response<RecipeDetailsResponse> response) {
+                if(!response.isSuccessful()){
+                    detailsListener.didError(response.message());
+                    return;
+                }
+                detailsListener.didFetch(response.body(), response.message());
+            }
+
+            @Override
+            public void onFailure(Call<RecipeDetailsResponse> call, Throwable t) {
+                detailsListener.didError(t.getMessage());
+            }
+        });
+    }
     private interface CallRandomRecipes{
         @GET("recipes/random")
         Call<RandomRecipeApiResponse> callRandomRecipe(
@@ -54,4 +77,14 @@ public class RequestManager {
                 @Query("tags")List<String> tags
                 );
     }
+
+    private interface CallRecipeDetails{
+        @GET("recipes/{id}/information")
+        Call<RecipeDetailsResponse> callRecipeDetails(
+                @Path("id") int id,
+                @Query("apiKey") String apiKey
+        );
+    }
+
+
 }
