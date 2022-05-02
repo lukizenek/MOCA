@@ -1,6 +1,7 @@
 package com.example.moca;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -62,7 +63,7 @@ public class RecipePageActivity extends AppCompatActivity {
             Picasso.get().load(body.image).into(image_meal_details);
 
             recycle_meal_ingredients.setHasFixedSize(true);
-            recycle_meal_ingredients.setLayoutManager(new LinearLayoutManager(RecipePageActivity.this, LinearLayoutManager.HORIZONTAL, false));
+            recycle_meal_ingredients.setLayoutManager(new GridLayoutManager(RecipePageActivity.this, 2));
             ingredientsAdapter = new IngredientsAdapter(RecipePageActivity.this, body.extendedIngredients);
             recycle_meal_ingredients.setAdapter(ingredientsAdapter);
 
