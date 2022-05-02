@@ -3,8 +3,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/moca_light"
+    app:cardBackgroundColor="#FFFFFF"
     app:cardElevation="8dp"
+    app:cardCornerRadius="16dp"
     android:layout_margin="8dp">
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,31 +15,31 @@
             android:id="@+id/text_ingredients_quantity"
             android:text="1 pc"
             android:singleLine="true"
-            android:ellipsize="marquee"
+            android:ellipsize="middle"
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:textColor="@color/moca_dark"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:autoSizeTextType="uniform"
             android:padding="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/image_ingredients"
             android:scaleType="center"
-            android:layout_width="80dp"
-            android:layout_height="50dp"/>
+            android:layout_width="160dp"
+            android:layout_height="100dp"/>
         <TextView
             android:id="@+id/text_ingredient_name"
             android:text="Orange"
-            android:textSize="16sp"
-            android:singleLine="true"
-            android:ellipsize="marquee"
+            android:singleLine="false"
+            android:ellipsize="middle"
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:textAlignment="center"
             android:textColor="@color/moca_dark"
             android:textStyle="bold"
+            android:inputType="textCapSentences"
             android:padding="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

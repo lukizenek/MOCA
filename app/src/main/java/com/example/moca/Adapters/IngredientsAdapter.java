@@ -15,6 +15,7 @@ import com.example.moca.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsViewHolder> {
     Context context;
@@ -33,10 +34,10 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsViewHold
 
     @Override
     public void onBindViewHolder(@NonNull IngredientsViewHolder holder, int position) {
-        holder.text_ingredient_name.setText(list.get(position).name);
+        holder.text_ingredient_name.setText(list.get(position).name.substring(0, 1).toUpperCase() + list.get(position).name.substring(1));
         holder.text_ingredient_name.setSelected(true);
         holder.text_ingredients_quantity.setSelected(true);
-        holder.text_ingredients_quantity.setText(list.get(position).original);
+        holder.text_ingredients_quantity.setText((list.get(position).measures.metric.amount + " " + list.get(position).measures.metric.unitShort));
         Picasso.get().load("https://spoonacular.com/cdn/ingredients_100x100/" + list.get(position).image).into(holder.image_ingredients);
     }
 

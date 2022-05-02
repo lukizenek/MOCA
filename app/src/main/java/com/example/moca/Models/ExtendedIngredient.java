@@ -16,3 +16,5 @@ public class ExtendedIngredient {
     public ArrayList<String> meta;
     public Measures measures;
 }
+
+
