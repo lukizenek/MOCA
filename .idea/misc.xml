@@ -5,9 +5,12 @@
       <map>
         <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/activity_main.xml" value="0.19655521783181357" />
         <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/activity_recipe_page.xml" value="0.40217391304347827" />
+        <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/list_instructions.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/list_instructions_step_items.xml" value="0.4041666666666667" />
         <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/list_meal_ingredients.xml" value="0.1962962962962963" />
         <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/list_random_recipe.xml" value="0.264" />
         <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/list_similar_recipe.xml" value="0.4041666666666667" />
+        <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/liste_instructions_steps.xml" value="0.4041666666666667" />
         <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/spinner_inner_text.xml" value="0.19655521783181357" />
         <entry key="..\:/Users/prolu/StudioProjects/MOCA/app/src/main/res/layout/spinner_text.xml" value="0.19655521783181357" />
         <entry key="app/src/main/res/drawable/ic_servings_amount.xml" value="0.1" />
