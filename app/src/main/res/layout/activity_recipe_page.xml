@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/moca"
+    android:background="@color/moca_dark"
     tools:context=".RecipePageActivity">
 
     <Toolbar
@@ -40,23 +40,20 @@
                 android:textColor="@color/moca_light"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <ImageView
-                android:layout_margin="8dp"
-                android:id="@+id/image_meal_details"
-                android:scaleType="centerCrop"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="260dp"/>
-            <TextView
-                android:id="@+id/text_meal_details"
-                android:text="Summary"
-                android:textSize="14sp"
-                android:textColor="@color/moca_dark"
-                android:maxLines="6"
-                android:textStyle="normal"
-                android:padding="8dp"
-                android:layout_margin="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp">
+                <ImageView
+                    android:id="@+id/image_meal_details"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"/>
+
+
+            </androidx.cardview.widget.CardView>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_meal_instructions"
                 android:layout_margin="8dp"
